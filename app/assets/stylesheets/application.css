@@ -2,11 +2,12 @@ body{
   background-color: rgb(196, 99, 20);
 }
 .welcome{
-  color: rgb(136, 3, 141);
+  color: rgb(215, 240, 255);
   border-style: solid;
   border-color: black;
   border-radius: 2px;
-  /* background-image: url("Desktop.jpg"); */
+  background-image: url("Desktop.jpg");
+  background-size: 1400px 700px;
   margin: 5px;
   padding-top: 100px;
   height: 50vh;
