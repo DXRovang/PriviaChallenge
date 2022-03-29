@@ -1,5 +1,11 @@
-<h1 class="title">Client Records</h1>
+<%
+=begin%>
+ <h1 class="title">Client Records</h1> 
+<%
+=end%>
 
+<% if @user != [] %>
+<h1 class="title">Client Records</h1>
 <% @user.each do |u|%>
 <div class="client">
 Name: <%= link_to u.full_name, user_path(u) %><br>
@@ -8,6 +14,10 @@ Location: <%= u.city %>,
 <%= u.state %><br>
 Score: <%= u.score %><br>
 </div>
+<% end %>
+<% else %>
+<h1 class="welcome">Welcome to the Privia Code Challenge!</h1>
+<h3 class="title">We do well, together.</h3>
 <% end %>
 
 <button class="margin"><%= link_to "Add New Client", new_user_path() %></button>

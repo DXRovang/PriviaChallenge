@@ -1,9 +1,23 @@
 body{
-  background-color: aqua;
+  background-color: rgb(196, 99, 20);
 }
-
-.title{
+.welcome{
+  color: rgb(136, 3, 141);
+  border-style: solid;
+  border-color: black;
+  border-radius: 2px;
+  /* background-image: url("Desktop.jpg"); */
+  margin: 5px;
+  padding-top: 100px;
+  height: 50vh;
   text-align: center;
+  text-shadow: 1px 1px black;
+}
+.title{
+  color: rgb(215, 240, 255);
+  text-align: center;
+  text-shadow: 2px 2px black;
+
 }
 .client{
   border-style: solid;
