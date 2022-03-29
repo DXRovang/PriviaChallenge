@@ -1,0 +1,11 @@
+<h1 class="title">Client Records</h1>
+
+<% @user.each do |u|%>
+<div class="client">
+Name: <%= u.full_name %><br>
+Email: <%= u.email %><br>
+Location: <%= u.city %>,
+<%= u.state %><br>
+Score: <%= u.score %><br>
+</div>
+<% end %>
