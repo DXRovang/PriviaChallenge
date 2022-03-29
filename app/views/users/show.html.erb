@@ -1,3 +1,5 @@
+<h1 class="title"><%= @user.full_name %></h1>
+
 <div class="client">
 Name: <%= @user.full_name %><br>
 Email: <%= @user.email %><br>
@@ -7,3 +9,4 @@ Score: <%= @user.score %><br>
 </div>
 <button><%= link_to "Update Client Info", edit_user_path(@user.id) %></button>
 <%= button_to "Delete Client", @user, method: :delete, data: { confirm: "Really?" } %>
+<button><%= link_to "Home", users_path() %></button>
