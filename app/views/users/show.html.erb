@@ -7,6 +7,6 @@ Location: <%= @user.city %>,
 <%= @user.state %><br>
 Score: <%= @user.score %><br>
 </div>
-<button><%= link_to "Update Client Info", edit_user_path(@user.id) %></button>
-<%= button_to "Delete Client", @user, method: :delete, data: { confirm: "Really?" } %>
-<button><%= link_to "Home", users_path() %></button>
+<button class="margin"><%= link_to "Update Client Info", edit_user_path(@user.id) %></button>
+<div class="margin"><%= button_to "Delete Client", @user, method: :delete, data: { confirm: "Really?" } %></div>
+<button class="margin"><%= link_to "Home", users_path() %></button>
