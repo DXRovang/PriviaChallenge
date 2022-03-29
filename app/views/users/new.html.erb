@@ -1,5 +1,19 @@
 <h1 class="title">New Client Form</h1>
 
+ <% if @user.errors.any? %>
+  <div id="error_explanation">
+    <h2>Oops!  We noticed  
+      <%= pluralize(@user.errors.count, "error") %>
+      when trying to process your information.
+    </h2>
+    <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <%= form_for @user do |u| %>
 <h3><%= u.label "First Name"%></h3>  
 <%= u.text_field :first_name%>
