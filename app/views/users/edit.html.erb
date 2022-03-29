@@ -1,0 +1,18 @@
+<h1 class="title">Update Client Form</h1>
+
+<%= form_for @user do |u| %>
+<h3><%= u.label "First Name"%></h3>  
+<%= u.text_field :first_name%>
+<h3><%= u.label "Last Name"%></h3>  
+<%= u.text_field :last_name%>
+<h3><%= u.label "Email"%></h3>  
+<%= u.text_field :email%>
+<h3><%= u.label "City"%></h3>  
+<%= u.text_field :city%>
+<h3><%= u.label "State"%></h3>  
+<%= u.text_field :state%>
+<h3><%= u.label "Score"%></h3>  
+<%= u.number_field :score%>
+
+<div><%= u.submit "Update Client"%></div> 
+<% end %>

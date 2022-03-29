@@ -2,7 +2,7 @@
 
 <% @user.each do |u|%>
 <div class="client">
-Name: <%= u.full_name %><br>
+Name: <%= link_to u.full_name, user_path(u) %><br>
 Email: <%= u.email %><br>
 Location: <%= u.city %>,
 <%= u.state %><br>
