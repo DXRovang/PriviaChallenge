@@ -28,6 +28,10 @@ RSpec.describe UsersController, :type => :controller do
       get :show, params: { id: user.id }
       expect(assigns(:user)).to eq user
     end
+    it "should return the users template" do
+      get :show, params: { id: user.id }
+      expect(response).to render_template :show
+    end
   end
 
   describe "GET #edit" do
