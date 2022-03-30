@@ -17,6 +17,23 @@ RSpec.describe UsersController, :type => :controller do
       expect(User.all).to include(user)
     end
   end
+
+  describe "GET #show" do
+    let(:user) { create :user }
+    it "responds successfully with an HTTP 200 status code" do
+      get :show, params:  { id: user.id }
+      expect(response).to have_http_status(200)
+    end
+  end
+
+  describe "GET #edit" do
+    let(:user) { create :user }
+    it "responds successfully with an HTTP 200 status code" do
+      get :edit, params:  { id: user.id }
+      expect(response).to have_http_status(200)
+    end
+  end
+
 end
 
 
