@@ -6,7 +6,7 @@ describe UsersController do
     it "populates an array of users" do
       user = create(:user)
       get :index
-      expect(:users).to include(user)
+      expect(User.all).to include(user)
     end
     it "renders the :index view" do
       get :index
