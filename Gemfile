@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'pry'
 group :test do
    gem 'rspec-rails'
+   gem 'rails-controller-testing'
 end
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

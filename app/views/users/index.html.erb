@@ -4,9 +4,9 @@
 <%
 =end%>
 
-<% if @user != [] %>
+<% if @users != [] %>
 <h1 class="title">Client Records</h1>
-<% @user.each do |u|%>
+<% @users.each do |u|%>
 <div class="client">
 Name: <%= link_to u.full_name, user_path(u) %><br>
 Email: <%= u.email %><br>
