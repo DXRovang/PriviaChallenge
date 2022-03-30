@@ -40,6 +40,14 @@ RSpec.describe UsersController, :type => :controller do
       get :edit, params:  { id: user.id }
       expect(response).to have_http_status(200)
     end
+    it "should return the user" do
+      get :edit, params: { id: user.id }
+      expect(assigns(:user)).to eq user
+    end
+    it "should return the edit template" do
+      get :edit, params: { id: user.id }
+      expect(response).to render_template :edit
+    end
   end
 
 end
