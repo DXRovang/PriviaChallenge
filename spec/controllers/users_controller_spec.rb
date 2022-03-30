@@ -24,6 +24,10 @@ RSpec.describe UsersController, :type => :controller do
       get :show, params:  { id: user.id }
       expect(response).to have_http_status(200)
     end
+    it "should return the user" do
+      get :show, params: { id: user.id }
+      expect(assigns(:user)).to eq user
+    end
   end
 
   describe "GET #edit" do
