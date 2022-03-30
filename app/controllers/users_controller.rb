@@ -19,21 +19,17 @@ class UsersController < ApplicationController
   end
 
   def show
-    find_user()
   end
 
   def edit
-    find_user()
   end
 
   def update
-    find_user()
     @user.update(user_params)
     redirect_to user_path(@user)
   end
 
   def destroy
-    find_user()
     @user.destroy
     redirect_to users_path
   end
