@@ -1,38 +1,57 @@
 require 'spec_helper'
+require 'rails_helper'
 
-describe UsersController do
-
+RSpec.describe UsersController, :type => :controller do
   describe "GET #index" do
-    it "populates an array of users" do
+    it "responds successfully with an HTTP 200 status code" do
+      get :index
+      expect(response).to have_http_status(200)
+    end
+    it "renders the index template" do
+      get :index
+      expect(response).to render_template("index")
+    end
+    it "loads all of the users inot @users" do
       user = create(:user)
       get :index
       expect(User.all).to include(user)
     end
-    it "renders the :index view" do
-      get :index
-      response.should render_template :index
-    end
   end
-  
-  # describe "GET #show" do
-  #   it "assigns the requested contact to @contact"
-  #   it "renders the :show template"
-  # end
-  
-  # describe "GET #new" do
-  #   it "assigns a new Contact to @contact"
-  #   it "renders the :new template"
-  # end
-  
-  # describe "POST #create" do
-  #   context "with valid attributes" do
-  #     it "saves the new contact in the database"
-  #     it "redirects to the home page"
-  #   end
-    
-  #   context "with invalid attributes" do
-  #     it "does not save the new contact in the database"
-  #     it "re-renders the :new template"
-  #   end
-  # end
 end
+# describe UsersController do
+
+#   describe "GET #index" do
+#     it "populates an array of users" do
+#       user = create(:user)
+#       get :index
+#       expect(User.all).to include(user)
+#     end
+#     it "renders the :index view" do
+#       get :index
+#       response.should render_template :index
+#     end
+#   end
+  
+#   describe "GET #show" do
+
+#     it "renders the :show template" do
+#       @user = FactoryBot.create(:user)
+#       params = { id: 123 }
+#       get :show, params
+#       expect(@user).to be(:user)
+#     end
+#   end
+  
+
+#   describe "GET #new" do
+
+#     it "renders the :new template" do
+#       get :new
+#       response.should render_template :new
+#     end
+#   end
+  
+
+  
+
+# end
