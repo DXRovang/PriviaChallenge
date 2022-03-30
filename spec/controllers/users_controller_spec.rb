@@ -11,7 +11,7 @@ RSpec.describe UsersController, :type => :controller do
       get :index
       expect(response).to render_template("index")
     end
-    it "loads all of the users inot @users" do
+    it "populates an array of users" do
       user = create(:user)
       get :index
       expect(User.all).to include(user)
