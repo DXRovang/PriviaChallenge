@@ -25,6 +25,7 @@ gem 'pry'
 group :test do
    gem 'rspec-rails'
    gem 'rails-controller-testing'
+   gem 'factory_bot_rails'
 end
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
