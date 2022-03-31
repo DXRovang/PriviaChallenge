@@ -61,6 +61,22 @@ RSpec.describe UsersController, :type => :controller do
     end
   end
 
+  describe "POST #create" do
+    it "responds to html by default" do
+      post :create, :params => { 
+        :user => { 
+          :first_name => "Eric",
+          :last_name => "Doe", 
+          :email => "JohnDoe@email.com", 
+          :city => "Albany", 
+          :state => "NY", 
+          :score => 101 
+          }
+        }
+      expect(response.content_type).to eq "text/html; charset=utf-8"
+    end
+  end
+
 
 end
 
