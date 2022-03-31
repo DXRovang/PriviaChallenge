@@ -77,11 +77,28 @@ RSpec.describe UsersController, :type => :controller do
     end
   end
 
+  # describe "PATCH #update/:id" do
+  #   @user = User.create(
+  #     :first_name => "Eric",
+  #     :last_name => "Doe", 
+  #     :email => "JohnDoe@email.com", 
+  #     :city => "Albany", 
+  #     :state => "NY", 
+  #     :score => 101 
+  #   )
+  #   binding.pry
+  #   it "checks that a user can be updated" do
+  #     put :update, :params => {:first_name => "John"}
+  #     binding.pry
+  #     expect(User.first.first_name).to eq("John")
+  #   end
+  # end
+
   describe "POST #destroy" do
     let!(:user)  { create :user }
     it "removes user from table" do
       post :destroy, params: { id: user.id }
-      expect(User.count).to eq(0)
+      expect(User.find_by(id: user.id)).to be_nil
     end
   end
 
