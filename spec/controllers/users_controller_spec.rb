@@ -77,6 +77,13 @@ RSpec.describe UsersController, :type => :controller do
     end
   end
 
+  describe "POST #destroy" do
+    let!(:user)  { create :user }
+    it "removes user from table" do
+      post :destroy, params: { id: user.id }
+      expect(User.count).to eq(0)
+    end
+  end
 
 end
 
