@@ -1,12 +1,15 @@
 <h1 class="title"><%= @user.full_name %></h1>
 
 <div class="client">
-Name: <%= @user.full_name %><br>
-Email: <%= @user.email %><br>
-Location: <%= @user.city %>,
-<%= @user.state %><br>
-Score: <%= @user.score %><br>
+  Name: <%= @user.full_name %><br>
+  Email: <%= @user.email %><br>
+  Location: <%= @user.city %>,<%= @user.state %><br>
+  Score: <%= @user.score %><br>
 </div>
+
 <button class="margin"><%= link_to "Update Client Info", edit_user_path(@user.id) %></button>
-<div class="margin"><%= button_to "Delete Client", @user, method: :delete, data: { confirm: "Really?" } %></div>
+<div class="margin">
+  <%= button_to "Delete Client", @user, method: :delete, data: { confirm: "Really?" } %>
+</div>
+
 <button class="margin"><%= link_to "Home", users_path() %></button>

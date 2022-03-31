@@ -15,9 +15,10 @@
 <% end %>
 
 <%= form_for @user do |u| %>
-
-<%= render partial: "users", locals: { u: u, user: @user } %>
-
-<div class="margin"><%= u.submit "Add Client"%></div> 
+  <%= render partial: "users", locals: { u: u, user: @user } %>
+  <div class="margin">
+    <%= u.submit "Add Client"%>
+  </div> 
 <% end %>
+
 <button class="margin"><%= link_to "Home", users_path() %></button>
