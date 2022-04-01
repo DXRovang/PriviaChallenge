@@ -77,23 +77,6 @@ RSpec.describe UsersController, :type => :controller do
     end
   end
 
-  # describe "PATCH #update/:id" do
-  #   @user = User.create(
-  #     :first_name => "Eric",
-  #     :last_name => "Doe", 
-  #     :email => "JohnDoe@email.com", 
-  #     :city => "Albany", 
-  #     :state => "NY", 
-  #     :score => 101 
-  #   )
-  #   binding.pry
-  #   it "checks that a user can be updated" do
-  #     put :update, :params => {:first_name => "John"}
-  #     binding.pry
-  #     expect(User.first.first_name).to eq("John")
-  #   end
-  # end
-
   describe "POST #destroy" do
     let!(:user)  { create :user }
     it "removes user from table" do
@@ -102,6 +85,23 @@ RSpec.describe UsersController, :type => :controller do
     end
   end
 
+  # describe "POST #update" do
+  #   let!(:user)  { create :user }
+  #   it "allows you to edit a single user" do
+  #     @myUser = User.first
+  #     visit "/users/#{@myUser.id}/edit"
+  #     fill_in :first_name, with: "Missy"
+  #     click_button "Update Client"
+
+  #     expect(page.current_path).to eq("/figures/#{@myUser.id}")
+  #     expect(page.body).to include("Missy")
+
+  #     @myUser = Figure.first
+  #     expect(@myUser.first_name).to eq("Missy")
+  #   end
+  # end
+
 end
+
 
 

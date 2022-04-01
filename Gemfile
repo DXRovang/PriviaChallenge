@@ -26,6 +26,8 @@ group :test do
    gem 'rspec-rails'
    gem 'rails-controller-testing'
    gem 'factory_bot_rails'
+   gem 'capybara'
+   gem 'webdrivers', '~> 4.0', require: false
 end
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
